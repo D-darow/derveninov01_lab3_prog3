@@ -2,17 +2,17 @@
 #include "engine.h"
 #include "iostream"
 #include <conio.h>
-
+// Установка лошадиных сил
 void engine::set_hs_power(int hs_power_in)
 {
 	hs_power = hs_power_in;
 }
-
+// Получение лошадиных сил
 int engine::get_hs_power()
 {
 	return hs_power;
 }
-
+// Установка рода топлива
 void engine::set_fuel(int fuel_in)
 {
 	if (fuel_in >= 1 && fuel <= 2) {
@@ -22,12 +22,12 @@ void engine::set_fuel(int fuel_in)
 		std::cout << "Ошибка. Неверный род топлива." << std::endl;
 	}
 }
-
+// Получение рода топлива
 int engine::get_fuel()
 {
 	return fuel;
 }
-
+// Установка количества цилиндров
 void engine::set_num_of_cylinders(int num_of_cylinders_in)
 {
 	if (num_of_cylinders_in >= 2 && num_of_cylinders_in <= 16) {
@@ -37,12 +37,12 @@ void engine::set_num_of_cylinders(int num_of_cylinders_in)
 		std::cout << "Ошибка. Неверное количество цилиндров." << std::endl;
 	}
 }
-
+// Получение количества цилиндров
 int engine::get_num_of_cylinders()
 {
 	return num_of_cylinders;
 }
-
+// Ввод информации о двигателе
 void engine::input_engine(engine& object)
 {
 	int flag = 0;
@@ -76,7 +76,7 @@ void engine::input_engine(engine& object)
 		flag = 1;
 	} while (object.num_of_cylinders < 2 || object.num_of_cylinders > 16);
 }
-
+// Вывод информации о двигателе
 void engine::print_engine(engine object)
 {
 	printf("\nИнформация о двигателе\n");
