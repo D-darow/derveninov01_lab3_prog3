@@ -6,6 +6,8 @@ private:
 	int fuel; // Род топлива
 	int num_of_cylinders; // Количество цилиндров (от 2 до 16)
 public:
+	engine(int power, int fuel_in, int cylinders); // Конструктор
+	~engine(); // Деструктор
 	void set_hs_power(int hs_power_in); // Установка лошадиных сил
 	int get_hs_power(); // Получение лошадиных сил
 	void set_fuel(int fuel_in); // Установка рода топлива

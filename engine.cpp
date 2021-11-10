@@ -1,7 +1,19 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include "engine.h"
 #include "iostream"
 #include <conio.h>
+#include "engine.h"
+// Конструктор
+engine::engine(int power, int fuel_in, int cylinders)
+{
+	hs_power = power;
+	fuel = fuel_in;
+	num_of_cylinders = cylinders;
+
+}
+// Деструктор
+engine::~engine()
+{
+}
 // Установка лошадиных сил
 void engine::set_hs_power(int hs_power_in)
 {

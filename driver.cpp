@@ -2,6 +2,17 @@
 #include <iostream>
 #include <conio.h>
 #include "driver.h"
+// Конструктор
+driver::driver(std::string name_in, std::string surname_in, std::string phone_number_in)
+{
+	name = name_in;
+	surname = surname_in;
+	phone_number = phone_number_in;
+}
+// Деструктор
+driver::~driver()
+{
+}
 // Установка имени
 void driver::set_name(std::string name_in)
 {

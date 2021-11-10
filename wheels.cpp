@@ -22,6 +22,16 @@ int wheels::get_width_of_tire()
 {
 	return width_of_tire;
 }
+// Конструктор
+wheels::wheels(int diametr, int width)
+{
+	diameter_of_disk = diametr;
+	width_of_tire = width;
+}
+// Деструктор
+wheels::~wheels()
+{
+}
 // Ввод информации о колесах
 void wheels::input_wheels(wheels& object)
 {

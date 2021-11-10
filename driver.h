@@ -8,6 +8,8 @@ private:
 	std::string surname; // Фамилия
 	std::string phone_number; // Номер телефона
 public:
+	driver(std::string name_in, std::string surname_in, std::string phone_number_in); // Конструктор
+	~driver(); // Деструктор
 	void set_name(std::string name_in); // Установка имени
 	std::string get_name(); // Получение имени
 	void set_surname(std::string surname_in); // Установка фамилии
