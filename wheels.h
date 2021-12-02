@@ -9,9 +9,10 @@ public:
 	int get_diametr_of_disk(); // Получение диаметра колеса
 	void set_width_of_tire(int width); // Установка ширины шины
 	int get_width_of_tire(); // Получение ширины шины
+	wheels(); // Конструктор по умолчанию
 	wheels(int diametr, int width); // Конструктор
 	~wheels(); // Деструктор
-	void input_wheels(wheels& object); // Ввод информации о колесах
-	void print_wheels(wheels object); // Вывод информации о колесах
+	void input_wheels(); // Ввод информации о колесах
+	void print_wheels(); // Вывод информации о колесах
 };
 

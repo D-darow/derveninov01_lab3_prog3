@@ -22,6 +22,12 @@ int wheels::get_width_of_tire()
 {
 	return width_of_tire;
 }
+// Конструктор по умолчанию
+wheels::wheels()
+{
+	diameter_of_disk = 1;
+	width_of_tire = 1;
+}
 // Конструктор
 wheels::wheels(int diametr, int width)
 {
@@ -33,35 +39,33 @@ wheels::~wheels()
 {
 }
 // Ввод информации о колесах
-void wheels::input_wheels(wheels& object)
+void wheels::input_wheels()
 {
 	int flag = 0;
 	do {
 		if (flag == 0) printf("Введите диаметр диска (Дюйм): ");
 		if (flag == 1) printf("Ошибка. Введите диаметр диска (Дюйм): ");
-		while (scanf("%d", &object.diameter_of_disk) != 1) {
+		while (scanf("%d", &diameter_of_disk) != 1) {
 			while (getchar() != '\n');
 			printf("Ошибка. Введите диаметр диска (Дюйм): ");
 		}
 		flag = 1;
-	} while (object.diameter_of_disk < 0);
+	} while (diameter_of_disk < 0);
 	flag = 0;
 	do {
 		if (flag == 0) printf("Введите ширину шины (мм): ");
 		if (flag == 1) printf("Ошибка. Введите ширину шины (мм): ");
-		while (scanf("%d", &object.width_of_tire) != 1) {
+		while (scanf("%d", &width_of_tire) != 1) {
 			while (getchar() != '\n');
 			printf("Ошибка. Введите ширину шины (мм): ");
 		}
 		flag = 1;
-	} while (object.width_of_tire < 0);
+	} while (width_of_tire < 0);
 }
 // Вывод информации о колесах
-void wheels::print_wheels(wheels object)
+void wheels::print_wheels()
 {
 	printf("\nИнформация о колесах\n");
-	printf("Диаметр диска (Дюйм): %d\n", object.diameter_of_disk);
-	printf("Ширина шины (мм): %d\n\n", object.width_of_tire);
-	printf("Нажмите любую клавишу, чтобы вернуться в меню...");
-	_getch();
+	printf("Диаметр диска (Дюйм): %d\n", diameter_of_disk);
+	printf("Ширина шины (мм): %d\n\n", width_of_tire);
 }

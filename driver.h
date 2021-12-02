@@ -8,6 +8,7 @@ private:
 	std::string surname; // Фамилия
 	std::string phone_number; // Номер телефона
 public:
+	driver(); // Конструктор по умолчанию
 	driver(std::string name_in, std::string surname_in, std::string phone_number_in); // Конструктор
 	~driver(); // Деструктор
 	void set_name(std::string name_in); // Установка имени
@@ -16,6 +17,6 @@ public:
 	std::string get_surname(); // Получение фамилии
 	void set_phone_number(std::string phone_number_in); // Установка номера телефона
 	std::string get_phone_number(); // Получение номера телефона
-	void input_driver(driver& object); // Ввод информации о водителе
-	void print_driver(driver object); // Вывод информации о водителе
+	void input_driver(); // Ввод информации о водителе
+	void print_driver(); // Вывод информации о водителе
 };

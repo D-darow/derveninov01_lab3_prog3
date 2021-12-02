@@ -1,7 +1,13 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <conio.h>
 #include "driver.h"
+// Конструктор по умолчанию
+driver::driver()
+{
+	name = "";
+	surname = "";
+	phone_number = "";
+}
 // Конструктор
 driver::driver(std::string name_in, std::string surname_in, std::string phone_number_in)
 {
@@ -44,7 +50,7 @@ std::string driver::get_phone_number()
 	return std::string(phone_number);
 }
 // Ввод информации о водителе
-void driver::input_driver(driver& object)
+void driver::input_driver()
 {
 	std::cout << "Введите имя водителя: ";
 	std::cin >> name;
@@ -54,12 +60,10 @@ void driver::input_driver(driver& object)
 	std::cin >> phone_number;
 }
 // Вывод информации о водителе
-void driver::print_driver(driver object)
+void driver::print_driver()
 {
-	printf("\nИнформация о водителе\n");
-	printf("Имя: %s\n", object.name);
-	printf("Фамилия: %s\n", object.surname);
-	printf("Номер телефона: %s\n\n", object.phone_number);
-	printf("Нажмите любую клавишу, чтобы вернуться в меню...");
-	_getch();
+	std::cout << "\nИнформация о водителе" << std::endl;
+	std::cout << "Имя: " << name << std::endl;
+	std::cout << "Фамилия: " << surname << std::endl;
+	std::cout << "Номер телефона: " << phone_number << std::endl;
 }
