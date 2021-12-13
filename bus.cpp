@@ -103,3 +103,8 @@ void bus::print_bus()
 	bus_wheels.print_wheels();
 	bus_driver.print_driver();
 }
+
+void reset_sum(bus &bus)
+{
+	bus.sum = 0;
+}

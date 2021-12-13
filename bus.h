@@ -24,4 +24,5 @@ public:
 	int remove_passenger(); // Убрать пассажира
 	void init_bus(); // Ввод информации об автобусе
 	void print_bus(); // Вывод информации об автобусе
+	friend void reset_sum(bus &bus); // Дружественная функция зануления суммы
 };
