@@ -3,11 +3,11 @@
 #include <conio.h>
 #include "bus.h"
 // Конструктор
-bus::bus(int bus_num_in, int num_of_seats_in, int price_in)
+bus::bus(int bus_num, int num_of_seats, int price)
 {
-	bus_num = bus_num_in;
-	num_of_seats = num_of_seats_in;
-	price = price_in;
+	this->bus_num = bus_num;
+	this->num_of_seats = num_of_seats;
+	this->price = price;
 	sum = 0;
 }
 // Деструктор
@@ -15,9 +15,9 @@ bus::~bus()
 {
 }
 // Установка номера автобуса
-void bus::set_bus_num(int bus_num_in)
+void bus::set_bus_num(int bus_num)
 {
-	bus_num = bus_num_in;
+	this->bus_num = bus_num;
 }
 // Получение номера автобуса
 int bus::get_bus_num()
@@ -25,9 +25,9 @@ int bus::get_bus_num()
 	return bus_num;
 }
 // Установка цены проезда
-void bus::set_price(int price_in)
+void bus::set_price(int price)
 {
-	price = price_in;
+	this->price = price;
 }
 // Получение цены проезда
 int bus::get_price()

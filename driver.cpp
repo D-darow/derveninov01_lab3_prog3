@@ -9,20 +9,20 @@ driver::driver()
 	phone_number = "";
 }
 // Конструктор
-driver::driver(std::string name_in, std::string surname_in, std::string phone_number_in)
+driver::driver(std::string name, std::string surname, std::string phone_number)
 {
-	name = name_in;
-	surname = surname_in;
-	phone_number = phone_number_in;
+	this->name = name;
+	this->surname = surname;
+	this->phone_number = phone_number;
 }
 // Деструктор
 driver::~driver()
 {
 }
 // Установка имени
-void driver::set_name(std::string name_in)
+void driver::set_name(std::string name)
 {
-	name = name_in;
+	this->name = name;
 }
 // Получение имени
 std::string driver::get_name()
@@ -30,9 +30,9 @@ std::string driver::get_name()
 	return std::string(name);
 }
 // Установка фамилии
-void driver::set_surname(std::string surname_in)
+void driver::set_surname(std::string surname)
 {
-	surname = surname_in;
+	this->surname = surname;
 }
 // Получение фамилии
 std::string driver::get_surname()
@@ -40,9 +40,9 @@ std::string driver::get_surname()
 	return std::string(surname);
 }
 // Установка номера телефона
-void driver::set_phone_number(std::string phone_number_in)
+void driver::set_phone_number(std::string phone_number)
 {
-	phone_number = phone_number_in;
+	this->phone_number = phone_number;
 }
 // Получение номера телефона
 std::string driver::get_phone_number()

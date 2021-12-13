@@ -3,9 +3,9 @@
 #include <conio.h>
 #include "wheels.h"
 // Установка диаметра колеса
-void wheels::set_diametr_of_disk(int diametr)
+void wheels::set_diametr_of_disk(int diametr_of_disk)
 {
-	diameter_of_disk = diametr;
+	this->diameter_of_disk = diametr_of_disk;
 }
 // Получение диаметра колеса
 int wheels::get_diametr_of_disk()
@@ -13,9 +13,9 @@ int wheels::get_diametr_of_disk()
 	return diameter_of_disk;
 }
 // Установка ширины шины
-void wheels::set_width_of_tire(int width)
+void wheels::set_width_of_tire(int width_of_tire)
 {
-	width_of_tire = width;
+	this->width_of_tire = width_of_tire;
 }
 // Получение ширины шины
 int wheels::get_width_of_tire()
@@ -29,10 +29,10 @@ wheels::wheels()
 	width_of_tire = 1;
 }
 // Конструктор
-wheels::wheels(int diametr, int width)
+wheels::wheels(int diametr_of_disk, int width_of_tire)
 {
-	diameter_of_disk = diametr;
-	width_of_tire = width;
+	this->diameter_of_disk = diametr_of_disk;
+	this->width_of_tire = width_of_tire;
 }
 // Деструктор
 wheels::~wheels()

@@ -10,11 +10,11 @@ engine::engine()
 	num_of_cylinders = 8;
 }
 // Конструктор
-engine::engine(int power, int fuel_in, int cylinders)
+engine::engine(int hs_power, int fuel, int num_of_cylinders)
 {
-	hs_power = power;
-	fuel = fuel_in;
-	num_of_cylinders = cylinders;
+	this->hs_power = hs_power;
+	this->fuel = fuel;
+	this->num_of_cylinders = num_of_cylinders;
 
 }
 // Деструктор
@@ -22,9 +22,9 @@ engine::~engine()
 {
 }
 // Установка лошадиных сил
-void engine::set_hs_power(int hs_power_in)
+void engine::set_hs_power(int hs_power)
 {
-	hs_power = hs_power_in;
+	this->hs_power = hs_power;
 }
 // Получение лошадиных сил
 int engine::get_hs_power()
@@ -32,10 +32,10 @@ int engine::get_hs_power()
 	return hs_power;
 }
 // Установка рода топлива
-void engine::set_fuel(int fuel_in)
+void engine::set_fuel(int fuel)
 {
-	if (fuel_in >= 1 && fuel <= 2) {
-		fuel = fuel_in;
+	if (fuel >= 1 && fuel <= 2) {
+		this->fuel = fuel;
 	}
 	else {
 		std::cout << "Ошибка. Неверный род топлива." << std::endl;
@@ -47,10 +47,10 @@ int engine::get_fuel()
 	return fuel;
 }
 // Установка количества цилиндров
-void engine::set_num_of_cylinders(int num_of_cylinders_in)
+void engine::set_num_of_cylinders(int num_of_cylinders)
 {
-	if (num_of_cylinders_in >= 2 && num_of_cylinders_in <= 16) {
-		num_of_cylinders = num_of_cylinders_in;
+	if (num_of_cylinders >= 2 && num_of_cylinders <= 16) {
+		this->num_of_cylinders = num_of_cylinders;
 	}
 	else {
 		std::cout << "Ошибка. Неверное количество цилиндров." << std::endl;

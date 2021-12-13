@@ -14,11 +14,11 @@ private:
 	int price; // Цена проезда (Руб)
 	int sum; // Сумма заработанных денег
 public:
-	bus(int bus_num_in, int num_of_seats_in, int price_in); // Конструктор
+	bus(int bus_num, int num_of_seats, int price); // Конструктор
 	~bus(); // Деструктор
-	void set_bus_num(int bus_num_in); // Установка номера автобуса
+	void set_bus_num(int bus_num); // Установка номера автобуса
 	int get_bus_num(); // Получение номера автобуса
-	void set_price(int price_in); // Установка цены проезда
+	void set_price(int price); // Установка цены проезда
 	int get_price(); // Получение цены проезда
 	int add_passenger(); // Добавить пассажира
 	int remove_passenger(); // Убрать пассажира
