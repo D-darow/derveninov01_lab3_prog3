@@ -34,6 +34,16 @@ int bus::get_price()
 {
 	return price;
 }
+// Получение суммы через указатель
+int* bus::get_sum_by_address()
+{
+	return &sum;
+}
+// Получение суммы по ссылке
+int& bus::get_sum_by_link()
+{
+	return sum;
+}
 // Добавить пассажира
 int bus::add_passenger()
 {

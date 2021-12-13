@@ -20,6 +20,8 @@ public:
 	int get_bus_num(); // Получение номера автобуса
 	void set_price(int price); // Установка цены проезда
 	int get_price(); // Получение цены проезда
+    int* get_sum_by_address(); // Получение суммы через указатель
+	int& get_sum_by_link(); // Получение суммы по ссылке
 	int add_passenger(); // Добавить пассажира
 	int remove_passenger(); // Убрать пассажира
 	void init_bus(); // Ввод информации об автобусе
