@@ -103,7 +103,25 @@ void bus::print_bus()
 	bus_wheels.print_wheels();
 	bus_driver.print_driver();
 }
-
+// Перегрузка оператора +
+int bus::operator+(bus b2)
+{
+	return this->sum + b2.sum;
+}
+// Перегрузка инкремента префиксная
+bus& bus::operator++()
+{
+	sum += price;
+	return *this;
+}
+// Перегрузка инкремента постфиксная
+bus& bus::operator++(int)
+{
+	bus prev = *this;
+	++* this;
+	return prev;
+}
+// Дружественная функция зануления суммы объекта
 void reset_sum(bus &bus)
 {
 	bus.sum = 0;
