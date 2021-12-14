@@ -13,6 +13,7 @@ private:
 	driver bus_driver;
 	int price; // Цена проезда (Руб)
 	int sum; // Сумма заработанных денег
+	static int total_sum; // Общая сумма зар. денег со всех автобусов
 public:
 	bus(int bus_num, int num_of_seats, int price); // Конструктор
 	~bus(); // Деструктор
@@ -30,4 +31,6 @@ public:
 	int operator + (bus b2); // Перегрузка оператора +
 	bus& operator++(); // Перегрузка инкремента префиксная
 	bus& operator++(int); // Перегрузка инкремента постфиксная
+	static int get_total_sum(); // Получение общей суммы зар. денег
+	static void set_total_sum(int total); // Установка общей суммы зар. денег
 };

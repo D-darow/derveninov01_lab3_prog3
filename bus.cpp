@@ -50,12 +50,12 @@ int bus::add_passenger()
 	if (num_of_seats < 32) {
 		num_of_seats += 1;
 		sum += price;
+		int tmp = bus::get_total_sum();
+		bus::set_total_sum(tmp + price);
 		printf("\nПассажир успешно зашел в автобус и оплатил проезд.\nСвободных мест осталось: %d\n\n", 32 - num_of_seats);
 	}
 	else {
 		printf("\nПассажир не смог занять место. Автобус переолнен.\n\n");
-		printf("Нажмите любую клавишу, чтобы вернуться в меню...");
-		_getch();
 		return -1;
 	}
 	return 0;
@@ -69,8 +69,6 @@ int bus::remove_passenger()
 	}
 	else {
 		printf("\nОшибка. Автобус пуст.\n\n");
-		printf("Нажмите любую клавишу, чтобы вернуться в меню...");
-		_getch();
 		return -1;
 	}
 	return 0;
@@ -130,6 +128,15 @@ bus& bus::operator++(int)
 	bus prev = *this;
 	++* this;
 	return prev;
+}
+// Получение общей суммы зар. денег
+int bus::get_total_sum()
+{
+	return total_sum;
+}
+void bus::set_total_sum(int total)
+{
+	bus::total_sum = total;
 }
 // Дружественная функция зануления суммы объекта
 void reset_sum(bus &bus)
