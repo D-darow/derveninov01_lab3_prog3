@@ -9,9 +9,9 @@ bus::bus()
 	num_of_seats = 0;
 	price = 0;
 	sum = 0;
-	engine bus_engine = engine();
-	wheels bus_wheels = wheels();
-	driver bus_driver = driver();
+	bus_engine = engine();
+	bus_wheels = wheels();
+	bus_driver = driver();
 }
 // Конструктор с одним параметром
 bus::bus(int bus_num)
@@ -20,9 +20,9 @@ bus::bus(int bus_num)
 	num_of_seats = 0;
 	price = 0;
 	sum = 0;
-	engine bus_engine = engine();
-	wheels bus_wheels = wheels();
-	driver bus_driver = driver();
+	bus_engine = engine();
+	bus_wheels = wheels();
+	bus_driver = driver();
 }
 // Конструктор
 bus::bus(int bus_num, int num_of_seats, int price, int hs_power, int fuel, int num_of_cylinders,
