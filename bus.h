@@ -15,7 +15,12 @@ private:
 	int sum; // Сумма заработанных денег
 	static int total_sum; // Общая сумма зар. денег со всех автобусов
 public:
-	bus(int bus_num, int num_of_seats, int price); // Конструктор
+	bus(); // Конструктор без параметров
+	bus(int bus_num); // Конструктор с одним параметром
+	// Конструктор со всеми параметрами
+	bus(int bus_num, int num_of_seats, int price, int hs_power, int fuel, int num_of_cylinders, 
+		int diametr_of_disk, int width_of_tire, std::string name, std::string surname, std::string phone_number);
+	bus(const bus& my_bus); // Конструктор копирования
 	~bus(); // Деструктор
 	void set_bus_num(int bus_num); // Установка номера автобуса
 	int get_bus_num(); // Получение номера автобуса

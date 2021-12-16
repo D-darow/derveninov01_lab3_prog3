@@ -2,13 +2,50 @@
 #include <iostream>
 #include <conio.h>
 #include "bus.h"
+// Конструктор без параметров
+bus::bus()
+{
+	bus_num = 0;
+	num_of_seats = 0;
+	price = 0;
+	sum = 0;
+	engine bus_engine = engine();
+	wheels bus_wheels = wheels();
+	driver bus_driver = driver();
+}
+// Конструктор с одним параметром
+bus::bus(int bus_num)
+{
+	this->bus_num = bus_num;
+	num_of_seats = 0;
+	price = 0;
+	sum = 0;
+	engine bus_engine = engine();
+	wheels bus_wheels = wheels();
+	driver bus_driver = driver();
+}
 // Конструктор
-bus::bus(int bus_num, int num_of_seats, int price)
+bus::bus(int bus_num, int num_of_seats, int price, int hs_power, int fuel, int num_of_cylinders,
+	int diametr_of_disk, int width_of_tire, std::string name, std::string surname, std::string phone_number)
 {
 	this->bus_num = bus_num;
 	this->num_of_seats = num_of_seats;
 	this->price = price;
+	bus_engine = engine(hs_power, fuel, num_of_cylinders);
+	bus_wheels = wheels(diametr_of_disk, width_of_tire);
+	bus_driver = driver(name, surname, phone_number);
 	sum = 0;
+}
+// Конструктор копирования
+bus::bus(const bus& my_bus)
+{
+	bus_num = my_bus.bus_num;
+	num_of_seats = my_bus.num_of_seats;
+	price = my_bus.price;
+	sum = my_bus.sum;
+	bus_engine = my_bus.bus_engine;
+	bus_wheels = my_bus.bus_wheels;
+	bus_driver = my_bus.bus_driver;
 }
 // Деструктор
 bus::~bus()
