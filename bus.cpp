@@ -89,10 +89,10 @@ int bus::add_passenger()
 		sum += price;
 		int tmp = bus::get_total_sum();
 		bus::set_total_sum(tmp + price);
-		printf("\nПассажир успешно зашел в автобус и оплатил проезд.\nСвободных мест осталось: %d\n\n", 32 - num_of_seats);
+		printf("\nПассажир успешно зашел в автобус и оплатил проезд.\nСвободных мест осталось: %d\n", 32 - num_of_seats);
 	}
 	else {
-		printf("\nПассажир не смог занять место. Автобус переолнен.\n\n");
+		//printf("\nПассажир не смог занять место. Автобус переолнен.\n\n");
 		return -1;
 	}
 	return 0;
@@ -102,10 +102,10 @@ int bus::remove_passenger()
 {
 	if (num_of_seats > 0) {
 		num_of_seats -= 1;
-		printf("\nПассажир успешно покинул автобус.\nСвободных мест осталось: %d\n\n", 32 - num_of_seats);
+		printf("\nПассажир успешно покинул автобус.\nСвободных мест осталось: %d\n", 32 - num_of_seats);
 	}
 	else {
-		printf("\nОшибка. Автобус пуст.\n\n");
+		//printf("\nОшибка. Автобус пуст.\n\n");
 		return -1;
 	}
 	return 0;
