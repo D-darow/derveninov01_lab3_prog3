@@ -9,24 +9,19 @@ int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-	bus my_bus = bus(23, 0, 25, 1, 1, 8, 30, 40, "asds", "asd", "12345");
-	my_bus.add_passenger();
-	try
-	{
-		int check = my_bus.remove_passenger();
-		if (check == -1) throw - 1;
+	bus bus_arr[2][2];
+	int bus_num = 1;
+	for (int i = 0; i < 2; i++) {
+		for (int j = 0; j < 2; j++) {
+			bus_arr[i][j] = bus(bus_num);
+			bus_num++;
+		}
 	}
-	catch (int a)
-	{
-		std::cout << "Автобус пуст." << std::endl;
-	}
-	try
-	{
-		int check = my_bus.remove_passenger();
-		if (check == -1) throw -1;
-	}
-	catch (int a)
-	{
-		std::cout << "\nАвтобус пуст." << std::endl;
+	bus_arr[0][0].set_price(25);
+	bus_arr[0][0].add_passenger();
+	for (int i = 0; i < 2; i++) {
+		for (int j = 0; j < 2; j++) {
+			bus_arr[i][j].print_bus();
+		}
 	}
 }
