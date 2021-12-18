@@ -1,7 +1,8 @@
 ﻿#include <iostream>
 #include <Windows.h>
 #include "bus.h"
-#include "engine.h"
+#include "foreign_driver.h"
+#include "Circle.h"
 
 int bus::total_sum = 0;
 
@@ -9,19 +10,12 @@ int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-	bus bus_arr[2][2];
-	int bus_num = 1;
-	for (int i = 0; i < 2; i++) {
-		for (int j = 0; j < 2; j++) {
-			bus_arr[i][j] = bus(bus_num);
-			bus_num++;
-		}
-	}
-	bus_arr[0][0].set_price(25);
-	bus_arr[0][0].add_passenger();
-	for (int i = 0; i < 2; i++) {
-		for (int j = 0; j < 2; j++) {
-			bus_arr[i][j].print_bus();
-		}
-	}
+	// Создание производного класса иностранного водителя
+	foreign_driver driver1 = foreign_driver("ФЫв", "ФЫв", "5423342", 123);
+	foreign_driver clone_driver = driver1;
+	// Печать класса через <<
+	std::cout << clone_driver;
+	// Производный класс от абстрактного Figure
+	Circle my_circle = Circle(2.345);
+	std::cout << "\nПлощадь круга = " << my_circle.getSquare();
 }
