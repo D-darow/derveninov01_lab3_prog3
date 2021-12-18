@@ -3,7 +3,7 @@
 
 class driver
 {
-private:
+protected:
 	std::string name; // Имя
 	std::string surname; // Фамилия
 	std::string phone_number; // Номер телефона
